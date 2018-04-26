@@ -125,7 +125,7 @@ function playerPick(playerPick) {
 	
 	if ((player.score == 10) || (computer.score == 10))
 		return newGame()
-//		return setGameElements('ended')	
+//		gameState = 'ended';	
 	
 	
 }
