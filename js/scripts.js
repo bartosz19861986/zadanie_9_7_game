@@ -117,15 +117,20 @@ function playerPick(playerPick) {
 
     checkRoundWinner(playerPick, computerPick);
 	setGamePoints();
+	
+	if (player.score == 10)
+		alert(player.name + ' has 10 points and win!');
+	else if (computer.score == 10)
+		alert('Computer has 10 points and win!');
+	
+	if ((player.score == 10) || (computer.score == 10))
+		return newGame()
+//		return setGameElements('ended')	
+	
+	
 }
 
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
 }
-
-function checkTenPoints() {
-	   if ((player.score == 10) || (computer.score == 10)) 
-          console.log('You have 10 points');
- }
-
